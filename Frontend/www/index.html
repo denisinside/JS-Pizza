@@ -1,80 +1,120 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Pizza</title>
-
-    <!-- Bootsrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-    <!-- LESS основний файл -->
-    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
-    <!-- LESS JavaScript компілятор -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="icon" href="assets/images/map-icon.png">
+    <title>Pizza Italiano Ultra Delicious</title>
 </head>
 <body>
-<div id="cart"></div>
-<div class="container">
-    <div class="row" id="pizza_list">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_1.jpg">
 
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 2</a>
-                        <a href="#" class="btn btn-default">Button 1</a>
-                    </p>
-                </div>
-            </div>
+<section class="side-bar-section">
+    <section class="ordered-section">
+        <section class="left-ordered">
+            <span class="order">Замовлення
+              <span class="order-amount">0</span>
+            </span>
+        </section>
+        <section class="right-ordered">
+            <span class="clear-order-text"> Очистити замовлення </span>
+        </section>
+    </section>
+    <section class="products-section">
+    </section>
+    <section class="products-sum-section">
+        <div class="order-amount-info">
+            <p class="order-amount-text">Сума замовлення</p>
+            <p class="order-amount-price">0 грн</p>
         </div>
+        <button class="order-button" >Замовити</button>
+    </section>
+</section>
 
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_2.jpg">
-
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 3</a>
-                        <a href="#" class="btn btn-default">Button 4</a>
-                    </p>
-                </div>
-            </div>
+<section class="main-section">
+    <section class="logo-section">
+        <img class="logo-mirror-image" src="assets/images/discount.svg" alt="discountTop">
+        <div class="logo-filler">
+            <div class="logo-text">PIZZA</div>
+            <div class="logo-subtext">KMA</div>
         </div>
-
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-                <img src="assets/images/pizza_3.jpg">
-
-                <div class="caption"><h3>Thumbnail label</h3>
-
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-
-                    <p>
-                        <a href="#" class="btn btn-primary">Button 5</a>
-                        <a href="#" class="btn btn-default">Button 6</a>
-                    </p>
-                </div>
+    </section>
+    <section class="menu-section">
+        <section class="menu-top-section">
+            <div class="text-block">
+                <p class="phone-number"> (044) 222 5 222</p>
             </div>
-        </div>
-    </div>
-</div>
+            <div class="text-block">
+                <p class="working-hours">24 години / 7 днів на тиждень</p>
+            </div>
+            <div class="text-block">
+                <p class="free-delivery">Безкоштовна доставка піци</p>
+            </div>
+            <div class="button-container">
+                <button class="login-button">Ввійти</button>
+            </div>
+        </section>
+        <section class="menu-bottom-section">
+            <div class="text-block">
+                <p class="pizza-text">Pizza Italiano Ultra Delicious</p>
+            </div>
+
+            <div class="button-container">
+                <button class="login-button">Ввійти</button>
+            </div>
+        </section>
+    </section>
+
+    <section class="product-list-section">
+        <section class="pizza-filter">
+            <section class="all-pizza">
+                <h2 class="all-pizza-text">Усі піци</h2>
+                <span class="all-pizza-counter">0</span>
+            </section>
+            <section class="pizza-type-filter">
+                <span class="pizza-type-text selected">Усі</span>
+                <span class="pizza-type-text">М'ясна</span>
+                <span class="pizza-type-text">Ананас</span>
+                <span class="pizza-type-text">З грибами</span>
+                <span class="pizza-type-text">З морепродуктами</span>
+                <span class="pizza-type-text">Веган</span>
+            </section>
+        </section>
+        <section class="all-items-section">
+            <div class="all-items-grid">
+            </div>
+        </section>
+    </section>
+
+    <section class="badge-section">
+        <img class="badge-top" src="assets/images/discount.svg" alt="weight">
+        <label class="badge-text"> ЦЬОГО<br/>ТИЖНЯ<br/>НА ВСЕ</label>
+        <label class="badge-dots"> -------- </label>
+        <label class="discount-number"> -25% </label>
+    </section>
+
+    <section class="order-done-alert">
+        <img src="assets/images/order_done.png" class="order-done-image"/>
+    </section>
+
+    <footer class="footer-section">
+        <section class="bottom-first">
+            <label class="footer-text top">
+                Pizza Italiano Ultra Delicious - практичний проект в межах курсу JavaScript в
+                Києво-Могилянській Академії
+            </label>
+        </section>
+        <section class="bottom-second">
+            <label class="footer-text"> Доставка піци не здійснюється, замовлення не приймаються, незарахи не ставляться </label>
+        </section>
+    </footer>
+
+</section>
+
 
 <!-- jQuery JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
 
-<!--Bootsrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-<!--Own JavaScript -->
-<!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+<script type="text/javascript"  src="assets/js/index.js"> </script>
 </body>
 </html>

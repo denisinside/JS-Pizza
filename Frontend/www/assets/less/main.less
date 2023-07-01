@@ -1,3 +1,637 @@
 @mainColor: blue;
 
 @import "pizza/pizza-card";
+body{
+  min-width: 610px;
+}
+
+.box {
+  display: flex;
+}
+
+.row {
+  margin-right: 100px;
+  margin-left: -40px;
+}
+
+.container {
+  margin-top: 300px;
+}
+
+.pizza-card h3 {
+  background-color: white;
+  font-weight: bold;
+  color: #EA862E;
+}
+
+.small-p {
+  color: #acaaaa;
+}
+
+.icons-for-small-size {
+  //width: 50%;
+}
+
+.number-small-size-icon,.number-big-size-icon {
+  padding-left: 5px;
+}
+
+
+.number-big-size-weight {
+  padding-left: 5px;
+}
+
+.number-small-size-icon-weight {
+  padding-left: 5px;
+}
+.number-small-size-icon , .number-small-size-icon-weight{
+  width: 50%;
+  display: inline-block;
+}
+.number-centered-size-icon , .number-centered-size-icon-weight{
+  padding-left: 5px;
+  display: inline-block;
+}
+
+.price-centered-size{
+  font-size: 25px;
+  font-weight: bold;
+}
+.price-small-size {
+  width: 50%;
+  display: inline-block;
+  padding-left: 16%;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hrn-small-size {
+  width: 50%;
+  display: inline-block;
+  padding-left: 16%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hrn-big-size {
+  padding-left: 20%;
+  font-size: 16px;
+  font-weight: bold;
+}
+.hrn-centered-size {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container-for-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn{
+  background-color: #fea300;
+  color: white;
+  border: none;
+}
+
+.price-big-size {
+  padding-left: 18%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -1%;
+  left: 80%;
+}
+.label-new::before {
+  content: 'Нова';
+}
+
+.label-new {
+  top: -1%;
+  left: 80%;
+  position: absolute;
+  background-color: #ed4443;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  display: block;
+}
+
+.label-new-additional::before {
+  content: 'Нова';
+}
+.label-new-additional {
+  top: 6%;
+  left: 80%;
+  position: absolute;
+  background-color: #ed4443;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  display: block;
+}
+
+.label-popular::before {
+  content: 'Популярна';
+}
+
+.label-popular {
+  position: absolute;
+  top: -1%;
+  left: 65%;
+  background-color: #1ebc49;
+  padding: 6px 10px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+}
+
+.icon-size {
+  padding-left: 15%;
+}
+.overlay {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: -320px;
+  height: 12%;
+  background-color: black;
+  opacity: 0.85;
+  z-index: 100;
+}
+.first-line-on-overlay p  {
+  color: gainsboro;
+  display: inline-block;
+  font-family: sans-serif;
+  margin-top: 15px;
+
+}
+#number-on-overlay {
+  margin-left: 150px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+#schedule-on-overlay {
+  font-size: 13px;
+  margin-left: 30px;
+}
+
+#free-delivery-on-overlay {
+  margin-left: 60px;
+  font-size: 20px;
+}
+
+#button-log-in {
+  position: absolute;
+  margin-top: 5px;
+  margin-right: 10px;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: #fb9d00;
+  border-color: #fb9d00;
+  border-radius: 5px;
+  padding: 6px 15px;
+  font-size: 15px;
+}
+
+#pizza-on-overlay {
+  color: white;
+  margin-left: 150px;
+  font-size: 20px;
+}
+
+.badge-up {
+  top: 0;
+  position:  fixed;
+  background: #EA862E;
+  text-transform: uppercase;
+  left: 20px;
+  bottom: 0;
+  width: 100px;
+  height: 120px;
+  z-index: 101;
+}
+.badge-up p {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#image-badge-up {
+  transform: scaleY(-1);
+  position: fixed;
+  top: 119.5px;
+  left: 20px;
+  width: 99.5px;
+}
+
+#badge-down {
+  left: 1%;
+  bottom: 0px;
+  background-color: #EA862E;
+  position: fixed;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+  z-index: 1;
+
+
+}
+
+#badge-down p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+
+}
+.text-this-week, .badge-text {
+  font-size: 13px;
+  color: white;
+}
+
+.dots {
+  color: maroon;
+  font-size: 15px;
+}
+
+.image-badge-down {
+  left: 1%;
+  bottom: 175px;
+  position: fixed;
+  width: 89px;
+}
+
+.text-pizza-badge {
+  padding-top: 20px;
+  font-size: 20px;
+}
+.text-kma-badge {
+  font-size: 25px;
+}
+
+#hr-overlay {
+  color: gainsboro;
+  margin-left: 150px;
+  margin-top: 1px;
+}
+
+#pizza_list {
+  width: 80%;
+}
+
+#statistics-of-order {
+  // flex: 1;
+  right: 0;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background-color: white;
+  z-index: 102;
+  position: fixed;
+}
+
+#main-line-of-stat {
+  margin-left: 20px;
+  margin-top: 30px;
+  display: inline-block;
+
+}
+#order {
+  color: black;
+  // padding: 30px 15px;
+  position: fixed;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+}
+#main-line-of-stat .number {
+  top: 1%;
+  left: 0;
+}
+
+#button-clear-order {
+  //left: 15%;
+  margin-left: 165px;
+  position: fixed;
+  font-size: 10px;
+  border: none;
+  background-color: white;
+  color: darkgrey;
+  padding-top: 5px;
+}
+
+.table-wrapper {
+  top: 50px;
+  height: 440px;
+  position: relative;
+  background-color: #f5f5f5;
+  overflow: auto;
+}
+
+#down-stat {
+  bottom: 0;
+  position: fixed;
+  border-top: 1px solid gainsboro;
+  width: 319px;
+  height: 95px;
+}
+
+.text-of-order {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
+  position: fixed;
+}
+
+.sum-of-order {
+  right: 40px;
+  position: absolute;
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.button-in-stat-to-order {
+  bottom: 15px;
+  position: absolute;
+  margin-left: 15px;
+  //font-weight: bold;
+  font-size: 17px;
+  color: white;
+  background-color: #fb9d00;
+  border: none;
+  border-radius: 6px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 90%;
+}
+
+
+
+.table-in-statistics tr {
+  height: 140px;
+  display: inline-block;
+  width: 320px;
+  overflow: hidden;
+  border-bottom: 1px solid #dddddd;
+}
+
+
+
+.first-column {
+  width: 240px;
+}
+
+.name-of-pizza-stat {
+  color: #EA862E;
+  font-size: 20px;
+  display: block;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.crossed-circle-and-number {
+  padding-left: 15px;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.weight-icon-and-number {
+  display: inline-block;
+}
+
+.third-row {
+  margin-top: 15px;
+  padding-left: 15px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.red-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  background-color: #db1f20;
+  margin-left: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.amount {
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+.green-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: #00ab39;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cross-button {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  border: 1px solid #d5d5d5;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  color: coral;
+}
+
+.cut-image-of-pizza {
+  width: 150px;
+  transform: scale(1.3);
+}
+
+
+
+#first-line {
+  position: absolute;
+  left: 41%;
+  font-size: 20px;
+  width: 80%;
+
+}
+
+.current-chapter {
+  top: 130px;
+  position: absolute;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-right: 30px;
+  display: inline-block;
+
+}
+
+.number {
+  display: inline-block;
+  top: 135px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+
+
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #EA862E;
+  height: 25px;
+  width: 30px;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 120px;
+}
+
+.second-line {
+  top: 180px;
+  position: absolute;
+  left: 18%;
+  font-size: 20px;
+  width: 60%;
+
+}
+
+.choosen-option {
+  color: white;
+  background-color: #EA862E;
+  border: none;
+  border-radius: 10%;
+  padding: 7px 15px;
+}
+
+.option {
+  display: inline-block;
+  padding-left: 25px;
+  background-color: #fffff4;
+  border: none;
+  color: #EA862E;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+.centered{
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  margin-top: 80px;
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 160px;
+  text-align: center;
+  border: 1px solid gainsboro;
+}
+
+@media (max-width: 1250px) {
+
+  .col-md-4 {
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 1300px) {
+
+  #free-delivery-on-overlay {
+    display: none;
+  }
+  #statistics-of-order {
+    //width: 50%;
+    width: 320px;
+  }
+
+}
+
+@media (max-width: 800px){
+  #pizza_list {
+    width: 100%;
+  }
+
+}
+
+
+
+@media (max-width: 900px) {
+  #schedule-on-overlay {
+    display: none;
+  }
+
+  .overlay {
+    width: 60%;
+  }
+
+  .col-md-4 {
+    width: 60%;
+  }
+  #button-log-in {
+    // top: 50px;
+  }
+  #pizza_list {
+    left: 5%;
+    width: 90%;
+  }
+
+  .container {
+    margin-left: 25px;
+  }
+  #statistics-of-order{
+  }
+  .second-line {
+    left: 0;
+    font-size: 16px;
+  }
+  #first-line {
+    left: 15%;
+  }
+
+  footer {
+    width: 65%;
+    padding-left: 100px
+  }
+}
+
+@media (max-width: 845px) {
+  #pizza-on-overlay {display: none}
+  #button-log-in{top: 50px}
+
+}
